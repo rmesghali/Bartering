@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   get '/landing' => 'barter#landing'
+  get '/barters' => 'barter#barters'
   # You can have the root of your site routed with "root"
   root 'barter#landing'
 

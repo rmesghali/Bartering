@@ -6,13 +6,17 @@ RSpec.feature "BartersApis", type: :feature do
     it "can create a listing and save it to a database" do
 
       visit "/barters/new"
-      fill_in 'Product', with 'lemon'
-      fill_in 'Description', with '20 lemons'
-      fill_in 'Category', with 'fruit'
-      fill_in 'Location', with 'Hillcrest'
+      expect(page).to have_content('New Product Listing')
+      fill_in 'Product', with: 'lemon'
+      fill_in 'Description', with: '20 lemons'
+      fill_in 'Category', with: 'fruit'
+      fill_in 'Location', with: 'Hillcrest'
 
       click_button "Create Barter"
-      expect(page).to have_text("New Product List")
+
+      barter = Barter.last
+
+      expect(barter.product).to eq 'lemon'
     end
   end
 end

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @barter.product %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @barter.description %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @barter.category %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @barter.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @barter.state %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @barter.zipcode %>
+</p>
+
+<p>
+  <strong>Expiration:</strong>
+  <%= @barter.expiration %>
+</p>
+
+<%= link_to 'Edit', edit_barter_path(@barter) %> |
+<%= link_to 'Back', barters_path %>

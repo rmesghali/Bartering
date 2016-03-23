@@ -20,12 +20,24 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :category %><br>
-    <%= f.text_area :category %>
+    <%= f.label :category %>
+    <%= f.select :category, [['Goods','goods'],['Services','services']] %>
   </div>
   <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_area :location %>
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %>
+    <%= f.select :state, [['California', 'california']] %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br>
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :neighborhood %>
+    <%= f.select :neighborhood, [['Hillcrest','hillcrest'],['North Park','north park'],['South Park','south park'],['Downtown','downtown'],['City Heights','city heights']] %>
   </div>
   <div class="field">
     <%= f.label :expiration %><br>

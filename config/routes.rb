@@ -2,12 +2,16 @@ Rails.application.routes.draw do
   resources :users
   resources :barters
 
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   get '/landing' => 'barter#landing'
   get '/barters' => 'barter#barters'
+  get '/hillcrest' => 'barters#hillcrest'
+  get '/north_park' => 'barters#north_park'
+  get '/kensington' => 'barters#kensington'
+  get '/university_heights' => 'barters#university_heights'
+  get '/little_italy' => 'barters#little_italy'
   # You can have the root of your site routed with "root"
   # root 'barter#landing'
   root "barters#new"

@@ -1,0 +1,2 @@
+module BartersHelper
+end

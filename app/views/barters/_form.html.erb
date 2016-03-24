@@ -1,0 +1,49 @@
+<%= form_for(@barter) do |f| %>
+  <% if @barter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@barter.errors.count, "error") %> prohibited this barter from being saved:</h2>
+
+      <ul>
+      <% @barter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :product %><br>
+    <%= f.text_field :product %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :category %>
+    <%= f.select :category, [['Goods','goods'],['Services','services']] %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %>
+    <%= f.select :state, [['California', 'california']] %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br>
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :neighborhood %>
+    <%= f.select :neighborhood, [['Hillcrest','hillcrest'],['North Park','north park'],['South Park','south park'],['Downtown','downtown'],['City Heights','city heights']] %>
+  </div>
+  <div class="field">
+    <%= f.label :expiration %><br>
+    <%= f.date_select :expiration %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

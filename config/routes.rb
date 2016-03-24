@@ -2,15 +2,15 @@ Rails.application.routes.draw do
   resources :users
   resources :barters
 
-  root "barters#new"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   get '/landing' => 'barter#landing'
   get '/barters' => 'barter#barters'
   # You can have the root of your site routed with "root"
-  root 'barter#landing'
-
+  # root 'barter#landing'
+  root "barters#new"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

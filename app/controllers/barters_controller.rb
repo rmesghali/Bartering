@@ -5,6 +5,11 @@ class BartersController < ApplicationController
   # GET /barters.json
 
   def index
+    @barters = Barter.all
+    # filter('Hillcrest')
+  end
+
+  def hillcrest
     filter('Hillcrest')
   end
 
@@ -12,16 +17,16 @@ class BartersController < ApplicationController
     filter('North Park')
   end
 
-  def south_park
-    filter('South Park')
+  def kensington
+    filter('Kensington')
   end
 
-  def downtown
-    filter('Downtown')
+  def university_heights
+    filter('University Heights')
   end
 
-  def city_heights
-    filter('City Heights')
+  def little_italy
+    filter('Little Italy')
   end
 
 

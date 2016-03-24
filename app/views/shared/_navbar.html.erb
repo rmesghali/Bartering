@@ -25,11 +25,12 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Location <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li class="dropdown-header">Neighborhoods</li>
-            <li><a><%= link_to "Hillcrest", :controller => :barters, :action => :index %></a></li>
-            <!-- <li><a><%#= link_to "North Park", :controller => :barters, :action => :north_park %></a></li>
-            <li><a><%#= link_to "South Park", :controller => :barters, :action => :south_park %></a></li>
-            <li><a><%#= link_to "Downtown", :controller => :barters, :action => :downtown %></a></li>
-            <li><a><%#= link_to "City Heights", :controller => :barters, :action => :city_heights %></a></li> -->
+            <li><a><%= link_to "All Listings", :controller => :barters, :action => :index %></a></li>
+            <li><a><%= link_to "Hillcrest", :controller => :barters, :action => :hillcrest %></a></li>
+            <li><a><%= link_to "North Park", :controller => :barters, :action => :north_park %></a></li>
+            <li><a><%= link_to "Kensington", :controller => :barters, :action => :kensington %></a></li>
+            <li><a><%= link_to "University Heights", :controller => :barters, :action => :university_heights %></a></li>
+            <li><a><%= link_to "Little Italy", :controller => :barters, :action => :little_italy %></a></li>
             <li class="divider"></li>
             <li><a href="/admin">Daniel Rojas Rules</a></li>
           </ul>

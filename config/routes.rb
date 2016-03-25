@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get '/little_italy' => 'barters#little_italy'
   # You can have the root of your site routed with "root"
   # root 'barter#landing'
-  root "barters#new"
+  root 'barters#landing'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

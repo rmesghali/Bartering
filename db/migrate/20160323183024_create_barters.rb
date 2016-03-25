@@ -9,6 +9,7 @@ class CreateBarters < ActiveRecord::Migration
       t.integer :zipcode
       t.date :expiration
 
+
       t.timestamps null: false
     end
   end

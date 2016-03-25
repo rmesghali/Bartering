@@ -1,7 +1,7 @@
 class BarterController < ApplicationController
-  def landing
-  end
+  # def landing
+  # end
 
-  def barters
-  end
+  # def barters
+  # end
 end

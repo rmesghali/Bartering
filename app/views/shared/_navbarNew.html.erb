@@ -1,0 +1,41 @@
+<div class="container">
+
+  <!-- The justified navigation menu is meant for single line per list item.
+       Multiple lines will require custom code not provided by Bootstrap. -->
+  <div class="masthead">
+    <h3 id="tradingpost">TRADE 'N' POST</h3>
+    <nav>
+      <ul class="nav nav-justified" id="navigation">
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="#">Goods</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#"> Login</a></li>
+        <li><a href="#"> Logout</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Location <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-header">Neighborhoods</li>
+              <li><a><%= link_to "All Listings", :controller => :barters, :action => :index %></a></li>
+              <li><a><%= link_to "Hillcrest", :controller => :barters, :action => :hillcrest %></a></li>
+              <li><a><%= link_to "North Park", :controller => :barters, :action => :north_park %></a></li>
+              <li><a><%= link_to "Kensington", :controller => :barters, :action => :kensington %></a></li>
+              <li><a><%= link_to "University Heights", :controller => :barters, :action => :university_heights %></a></li>
+              <li><a><%= link_to "Little Italy", :controller => :barters, :action => :little_italy %></a></li>
+            <li class="divider"></li>
+            <li><a href="/admin">Local Twitter Feed</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">Categories</li>
+            <li><a href="/one">Goods</a></li>
+            <li><a href="/two">Services</a></li>
+          </ul>
+        </li>
+
+
+      </ul>
+    </nav>
+  </div>
+</div>

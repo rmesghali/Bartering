@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  get '/landing' => 'barter#landing'
+  get '/landing' => 'barters#landing'
   get '/barters' => 'barter#barters'
   get '/hillcrest' => 'barters#hillcrest'
   get '/north_park' => 'barters#north_park'

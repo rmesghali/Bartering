@@ -1,18 +1,97 @@
 
- .button{
-   color: red;
-   width: 300px;
-   height: 100px;
-   background-color: lightblue;
-   align-items: center;
-   margin-right: 0;
-
+body {
+  padding-top: 20px;
+  background-color: #f09b1e
 }
-   /*.page {
-     background-color: lightgreen;
-   }*/
 
-.picture {
-  background-image: url('https://www.jacksonvillebarter.com/wp-content/uploads/2015/03/Jacksonville-Barter-Exchange-Trading.jpg');
+#tradingpost {
+  color: #1f3842;
+  font-size: 48px;
+}
 
+/*#navigation {
+background-color: #031724;
+color: #1f3842;
+}*/
+
+/* Customize the nav-justified links to be fill the entire space of the .navbar */
+
+.nav-justified {
+  background-color: #4f8da6;
+  border: 1px solid #f09b1e;
+  border-radius: 5px;
+}
+.nav-justified > li > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #1f3842;
+  text-align: center;
+  background-color: #4f8da6; /* Old browsers */
+  background-image: -webkit-gradient(linear, left top, left bottom, from#4f8da6), to(#4f8da6));
+  background-image: -webkit-linear-gradient(top, #4f8da6 0%, #4f8da6 100%);
+  background-image:      -o-linear-gradient(top, #4f8da6 0%, #4f8da6 100%);
+  background-image:         linear-gradient(to bottom, #4f8da6 0%,#4f8da6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f8da6', endColorstr='#4f8da6',GradientType=0 ); /* IE6-9 */
+  background-repeat: repeat-x; /* Repeat the gradient */
+  border-bottom: 1px solid #1f3842;
+}
+.nav-justified > .active > a,
+.nav-justified > .active > a:hover,
+.nav-justified > .active > a:focus {
+  background-color: #4f8da6;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
+          box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
+}
+.nav-justified > li:first-child > a {
+  border-radius: 5px 5px 0 0;
+}
+.nav-justified > li:last-child > a {
+  border-bottom: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+@media (min-width: 768px) {
+  .nav-justified {
+    max-height: 52px;
+  }
+  .nav-justified > li > a {
+    border-right: 1px solid #1f3842;
+    border-left: 1px solid #1f3842;
+  }
+  .nav-justified > li:first-child > a {
+    border-left: 0;
+    border-radius: 5px 0 0 5px;
+  }
+  .nav-justified > li:last-child > a {
+    border-right: 0;
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .masthead,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/*This is for the footer*/
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #4f8da6;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
 }

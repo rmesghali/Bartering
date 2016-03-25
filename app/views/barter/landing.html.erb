@@ -1,37 +1,63 @@
 <body class="page">
-</br>
-</br>
-</br>
-
-<p>     I love cheese, especially dolcelatte bavarian bergkase. Brie the big cheese everyone loves ricotta chalk and cheese cheese slices st. agur blue cheese cow. Boursin gouda hard cheese cheese strings stinking bishop everyone loves cauliflower cheese lancashire. Swiss red leicester cheese on toast stinking bishop say cheese taleggio chalk and cheese.</p>
-
-<p>Caerphilly smelly cheese camembert de normandie. Cheese on toast fondue parmesan taleggio roquefort cream cheese swiss cow. Feta pepper jack swiss pepper jack cauliflower cheese cheesecake queso cheese slices. Who moved my cheese brie cream cheese dolcelatte cheese and wine queso.</p>
-
-<p>Croque monsieur cheese triangles cow. Monterey jack cheesecake gouda camembert de normandie boursin who moved my cheese cheese and wine paneer. Cheddar cheeseburger chalk and cheese fromage frais brie taleggio macaroni cheese feta. Manchego cauliflower cheese chalk and cheese cheesy feet pecorino mascarpone jarlsberg squirty cheese. Cheeseburger airedale halloumi fromage frais.</p>
 
 
-<div class="row">
-  <div class="col-md-6">
-    <div class = 'button'>
-      <form>
-        <input class="button" type="button" value="Goods" name="goods_button"></input>
-      </form>
-      </div>
-    </div>
-      <div class="col-md-6">
-      <form>
-        <input class="button" type="button" value="Services" name="services_button"></input>
-      </form>
+
+
+<div class="container">
+
+  <!-- The justified navigation menu is meant for single line per list item.
+       Multiple lines will require custom code not provided by Bootstrap. -->
+  <div class="masthead">
+    <h3 id="tradingpost">The Trading Post</h3>
+    <nav>
+      <ul class="nav nav-justified" id="navigation">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Goods</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#"><span class='glyphicon glyphicon-hand-right'> Login</a></li>
+        <li><a href="#"><span class='glyphicon glyphicon-hand-left'> Logout</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Location <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">Neighborhoods</li>
+            <li><a href="/one">Zipcode 1</a></li>
+            <li><a href="/two">Zipcode 2</a></li>
+            <li><a href="/three">Zipcode 3</a></li>
+            <li><a href="/three">Zipcode 4</a></li>
+            <li><a href="/three">Zipcode 5</a></li>
+            <li><a href="/three">Zipcode 6</a></li>
+            <li><a href="/three">Zipcode 7</a></li>
+            <li class="divider"></li>
+            <li><a href="/admin">Local Twitter Feed</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">Categories</li>
+            <li><a href="/one">Goods</a></li>
+            <li><a href="/two">Services</a></li>
+          </ul>
+        </li>
+
+
+      </ul>
+    </nav>
+  </div>
+
+
+<div class="picture">
+  <div class="row">
+    <div class="col-md-12">
+    <%= image_tag("Barter-Exchange-Trading.jpg", class: "img-responsive center-block")%>
     </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-12">
-  <%= image_tag("Barter-Exchange-Trading.jpg")%>
 </div>
-</div>
-
-</div>
-
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted">A Christina, David, Daniel, Dom and Ramin Production!</p>
+  </div>
+</footer>
 </body>

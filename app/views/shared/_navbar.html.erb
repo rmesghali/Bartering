@@ -1,4 +1,4 @@
-<nav class="navbar navbar-fixed-bottom navbar-default" role="navigation">
+<nav class="navbar navbar-fixed-top navbar-default" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsable">
@@ -25,15 +25,14 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Location <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li class="dropdown-header">Neighborhoods</li>
-            <li><a href="/one">Zipcode 1</a></li>
-            <li><a href="/two">Zipcode 2</a></li>
-            <li><a href="/three">Zipcode 3</a></li>
-            <li><a href="/three">Zipcode 4</a></li>
-            <li><a href="/three">Zipcode 5</a></li>
-            <li><a href="/three">Zipcode 6</a></li>
-            <li><a href="/three">Zipcode 7</a></li>
+            <li><a><%= link_to "All Listings", :controller => :barters, :action => :index %></a></li>
+            <li><a><%= link_to "Hillcrest", :controller => :barters, :action => :hillcrest %></a></li>
+            <li><a><%= link_to "North Park", :controller => :barters, :action => :north_park %></a></li>
+            <li><a><%= link_to "Kensington", :controller => :barters, :action => :kensington %></a></li>
+            <li><a><%= link_to "University Heights", :controller => :barters, :action => :university_heights %></a></li>
+            <li><a><%= link_to "Little Italy", :controller => :barters, :action => :little_italy %></a></li>
             <li class="divider"></li>
-            <li><a href="/admin">Local Twitter Feed</a></li>
+            <li><a href="/admin">Daniel Rojas Rules</a></li>
           </ul>
         </li>
       </ul>
@@ -43,3 +42,5 @@
     </div>
   </div>
 </nav>
+<div class="space">
+</div>

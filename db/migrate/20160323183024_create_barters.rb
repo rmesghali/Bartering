@@ -4,8 +4,11 @@ class CreateBarters < ActiveRecord::Migration
       t.string :product
       t.text :description
       t.text :category
-      t.text :location
+      t.string :city
+      t.string :state
+      t.integer :zipcode
       t.date :expiration
+
 
       t.timestamps null: false
     end

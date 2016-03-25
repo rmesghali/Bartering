@@ -3,8 +3,43 @@ class BartersController < ApplicationController
 
   # GET /barters
   # GET /barters.json
+
+  def landing
+  end
+
   def index
     @barters = Barter.all
+    # filter('Hillcrest')
+  end
+
+  def hillcrest
+    filter('hillcrest')
+  end
+
+  def north_park
+    filter('north park')
+  end
+
+  def kensington
+    filter('kensington')
+  end
+
+  def university_heights
+    filter('university heights')
+  end
+
+  def little_italy
+    filter('little italy')
+  end
+
+
+  def filter(neighborhood)
+    barters = Barter.all
+    if barters.empty?
+      @barters = Barter.all
+    else
+      @barters = Barter.where(neighborhood: neighborhood)
+    end
   end
 
   # GET /barters/1

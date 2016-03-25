@@ -1,18 +1,21 @@
+.space {
+  height: 60px;
+}
 
- .button{
+ .button {
    color: red;
    width: 300px;
    height: 100px;
    background-color: lightblue;
    align-items: center;
-   margin-right: 0;
+   font-size: 55px;
+   font-family: serif;
 
-}
-   /*.page {
-     background-color: lightgreen;
-   }*/
+
+  }
+
 
 .picture {
   background-image: url('https://www.jacksonvillebarter.com/wp-content/uploads/2015/03/Jacksonville-Barter-Exchange-Trading.jpg');
-
+  text-align: center;
 }

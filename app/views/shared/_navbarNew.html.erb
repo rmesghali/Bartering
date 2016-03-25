@@ -29,8 +29,9 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li class="dropdown-header">Categories</li>
-            <li><a href="/one">Goods</a></li>
-            <li><a href="/two">Services</a></li>
+            <!-- <li><a><%#= link_to "Goods", :controller => :barters, :action => :goods, :goods => 1 %></a></li> -->
+            <li><a><%= link_to "Goods", :controller => :barters, :action => :goods %></a></li>
+            <li><a><%= link_to "Services", :controller => :barters, :action => :services %></a></li>
           </ul>
         </li>
 

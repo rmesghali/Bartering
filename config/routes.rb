@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   get '/landing' => 'barters#landing'
+  get '/goods' => 'barters#goods'
+  get '/services' => 'barters#services'
   get '/barters' => 'barter#barters'
   get '/hillcrest' => 'barters#hillcrest'
   get '/north_park' => 'barters#north_park'

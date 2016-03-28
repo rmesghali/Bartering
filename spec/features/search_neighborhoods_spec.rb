@@ -5,7 +5,7 @@ RSpec.feature "SearchNeighborhoods", type: :feature do
     #this test searches listings by neighborhood
     it "can search listings by neighborhood using a drop down menu" do
       visit "/barters"
-      expect(page).to have_content('Listing Barters')
+      expect(page).to have_content('Hillcrest')
       click_link 'Hillcrest'
       expect(current_path).to eq '/hillcrest'
       expect(page).to have_content('Hillcrest')

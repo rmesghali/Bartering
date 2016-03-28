@@ -9,37 +9,48 @@ class BartersController < ApplicationController
 
   def index
     @barters = Barter.all
-    # filter('Hillcrest')
+  end
+
+  def goods
+    @barters = Barter.where(:category => 'goods')
+  end
+
+  def services
+    @barters = Barter.where(:category => 'services')
   end
 
   def hillcrest
-    filter('hillcrest')
+    filter_neighborhood('hillcrest')
   end
 
   def north_park
-    filter('north park')
+    filter_neighborhood('north park')
   end
 
   def kensington
-    filter('kensington')
+    filter_neighborhood('kensington')
   end
 
   def university_heights
-    filter('university heights')
+    filter_neighborhood('university heights')
   end
 
   def little_italy
-    filter('little italy')
+    filter_neighborhood('little italy')
   end
 
 
-  def filter(neighborhood)
+  def filter_neighborhood(neighborhood)
     barters = Barter.all
     if barters.empty?
       @barters = Barter.all
     else
       @barters = Barter.where(neighborhood: neighborhood)
     end
+  end
+
+  def filter_category(category)
+
   end
 
   # GET /barters/1

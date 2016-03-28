@@ -2,9 +2,9 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Barters</h1>
+<h1>University Heights Listings</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Product </th>
@@ -23,7 +23,7 @@
         <td><%= barter.description %></td>
         <td><%= barter.category %></td>
         <td><%= barter.expiration %></td>
-        <td><%= barter.neighborhood %></td>
+        <td><%= barter.neighborhood.capitalize %></td>
         <td><%= link_to 'Show', barter %></td>
         <td><%= link_to 'Edit', edit_barter_path(barter) %></td>
         <td><%= link_to 'Destroy', barter, method: :delete, data: { confirm: 'Are you sure?' } %></td>

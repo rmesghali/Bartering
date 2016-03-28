@@ -11,39 +11,96 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :product %><br>
-    <%= f.text_field :product %>
+<div class="bootstrap-iso">
+ <div class="container-fluid">
+  <div class="row" id="formbackground">
+   <div class="col-md-6 col-sm-6 col-xs-12">
+    <div class="formden_header">
+     <p>
+     </p>
+    </div>
+    <form action="https://formden.com/post/wWHGqJyG/" method="post">
+     <div class="form-group ">
+      <label class="control-label requiredField" for="name">
+       Product
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="name" name="barter[product]" placeholder="Enter good or service here" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="textarea">
+       Description
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <textarea class="form-control" cols="40" id="textarea" name="barter[description]" placeholder="describe your good or service" rows="10"></textarea>
+     </div>
+     <div class="form-group" id="div_radio">
+      <label class="control-label requiredField" for="radio">
+       Select a Choice
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="">
+       <label class="radio-inline">
+        <input name="barter[category]" type="radio" value="Services"/>
+        Services
+       </label>
+       <label class="radio-inline">
+        <input name="barter[category]" type="radio" value="Goods"/>
+        Goods
+       </label>
+      </div>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="select">
+       Neighborhood
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <select class="select form-control" id="select" name="barter[neighborhood]">
+       <option value="hillcrest">
+        Hillcrest
+       </option>
+       <option value="little italy">
+        Little Italy
+       </option>
+       <option value="university heights">
+        University Heights
+       </option>
+       <option value="kensington">
+        Kensington
+       </option>
+       <option value="north park">
+        North Park
+       </option>
+      </select>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="date">
+       Expiration Date
+      </label>
+      <input class="form-control" id="date" name="barter[expiration]" placeholder="MM/DD/YYYY" type="text"/>
+      <span class="help-block" id="hint_date">
+       Set an expiration date for your goods or services. Your post will be automatically removed if still active on this date. For perishable goods, please indicate how long this good will remain fresh before spoiling.
+      </span>
+     </div>
+     <div class="form-group">
+      <div>
+
+       <button class="btn btn-default " id="newbarter" name="submit" type="submit">
+        Submit
+       </button>
+      </div>
+     </div>
+    </form>
+   </div>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :category %>
-    <%= f.select :category, [['Goods','goods'],['Services','services']] %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :state %>
-    <%= f.select :state, [['California', 'california']] %>
-  </div>
-  <div class="field">
-    <%= f.label :zip %><br>
-    <%= f.text_field :zip %>
-  </div>
-  <div class="field">
-    <%= f.label :neighborhood %>
-    <%= f.select :neighborhood, [['Hillcrest','hillcrest'],['North Park','north park'],['South Park','south park'],['Downtown','downtown'],['City Heights','city heights']] %>
-  </div>
-  <div class="field">
-    <%= f.label :expiration %><br>
-    <%= f.date_select :expiration %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+ </div>
+</div>
 <% end %>

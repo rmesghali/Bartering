@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :users
+  devise_for :users, path_names: {login: "login", logout: "logout"}
+  # :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
+  # resources :users
   resources :barters
 
   # The priority is based upon order of creation: first created -> highest priority.

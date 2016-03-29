@@ -1,5 +1,6 @@
 class BartersController < ApplicationController
   before_action :set_barter, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:landing, :index, :goods, :services]
 
   # GET /barters
   # GET /barters.json
@@ -12,11 +13,11 @@ class BartersController < ApplicationController
   end
 
   def goods
-    @barters = Barter.where(:category => 'goods')
+    @barters = Barter.where(category: 'Goods')
   end
 
   def services
-    @barters = Barter.where(:category => 'services')
+    @barters = Barter.where(category: 'Services')
   end
 
   def hillcrest
@@ -56,6 +57,7 @@ class BartersController < ApplicationController
   # GET /barters/1
   # GET /barters/1.json
   def show
+    @barter = Barter.find(params[:id])
   end
 
   # GET /barters/new
@@ -108,13 +110,13 @@ class BartersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_barter
-      @barter = Barter.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_barter
+    @barter = Barter.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def barter_params
-      params.require(:barter).permit(:product, :description, :category, :neighborhood, :city, :state, :zip, :expiration)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def barter_params
+    params.require(:barter).permit(:product, :description, :category, :neighborhood, :expiration)
+  end
 end

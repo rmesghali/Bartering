@@ -1,32 +1,29 @@
 
 <p id="notice"><%= notice %></p>
-
+<!--This displays an aggregated table of all the goods created
+-->
 <h1>Listings of Goods</h1>
-
-<table>
+<!--Creates the table headings html
+-->
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Product</th>
       <th>Description</th>
       <th>Category</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Zip Code</th>
       <th>Neighborhood</th>
       <th>Expiration</th>
       <th colspan="3"></th>
     </tr>
   </thead>
-
+<!--pulls the data from the database table to be displayed in the above table
+-->
   <tbody>
     <% @barters.each do |barter| %>
       <tr>
         <td><%= barter.product %></td>
         <td><%= barter.description %></td>
         <td><%= barter.category %></td>
-        <td><%= barter.city %></td>
-        <td><%= barter.state %></td>
-        <td><%= barter.zip %></td>
         <td><%= barter.neighborhood %></td>
         <td><%= barter.expiration %></td>
         <td><%= link_to 'Show', barter %></td>
@@ -38,5 +35,7 @@
 </table>
 
 <br>
+<!--Links to the the 'New Barter form to create a new item to trade'
+-->
 
 <%= link_to 'New Barter', new_barter_path %>

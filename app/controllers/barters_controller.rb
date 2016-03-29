@@ -1,6 +1,6 @@
 class BartersController < ApplicationController
   before_action :set_barter, only: [:show, :edit, :update, :destroy]
-  # before_action :authenticate_user!, except: [:home, :index, :show]
+  before_action :authenticate_user!, except: [:landing, :index, :goods, :services]
 
   # GET /barters
   # GET /barters.json

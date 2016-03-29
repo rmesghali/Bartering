@@ -1,38 +1,49 @@
 <div class="container">
 
   <!-- The justified navigation menu is meant for single line per list item.
-       Multiple lines will require custom code not provided by Bootstrap. -->
+  Multiple lines will require custom code not provided by Bootstrap. -->
   <div class="masthead">
     <h3 id="tradingpost">TRADE 'N' POST</h3>
     <nav>
       <ul class="nav nav-justified" id="navigation">
         <li class="active"><a href="/">Home</a></li>
 
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Location <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li class="dropdown-header"></li>
-              <li><a><%= link_to "All Listings", :controller => :barters, :action => :index %></a></li>
-              <li><a><%= link_to "Hillcrest", :controller => :barters, :action => :hillcrest %></a></li>
-              <li><a><%= link_to "North Park", :controller => :barters, :action => :north_park %></a></li>
-              <li><a><%= link_to "Kensington", :controller => :barters, :action => :kensington %></a></li>
-              <li><a><%= link_to "University Heights", :controller => :barters, :action => :university_heights %></a></li>
-              <li><a><%= link_to "Little Italy", :controller => :barters, :action => :little_italy %></a></li>
+        <!-- devise login/logout -->
+        <% if user_signed_in? %>
+        <li>
+          <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+        </li>
+        <% else %>
+        <li>
+          <%= link_to('Login', new_user_session_path)  %>
+        </li>
+        <% end %>
+
+        <li>
+          <%= link_to "Sign up", new_user_registration_path %>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Location <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">Neighborhoods</li>
+            <li><a><%= link_to "All Listings", root_path %></a></li>
+            <li><a><%= link_to "Hillcrest", hillcrest_path %></a></li>
+            <li><a><%= link_to "North Park", north_park_path %></a></li>
+            <li><a><%= link_to "Kensington", kensington_path %></a></li>
+            <li><a><%= link_to "University Heights", university_heights_path %></a></li>
+            <li><a><%= link_to "Little Italy", little_italy_path %></a></li>
             <li class="divider"></li>
           </ul>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li class="dropdown-header"></li>
-            <!-- <li><a><%#= link_to "Goods", :controller => :barters, :action => :goods, :goods => 1 %></a></li> -->
-            <li><a><%= link_to "Goods", :controller => :barters, :action => :goods %></a></li>
-            <li><a><%= link_to "Services", :controller => :barters, :action => :services %></a></li>
+
+            <li class="dropdown-header">Categories</li>
+            <li><a><%= link_to "Goods", goods_path %></a></li>
+            <li><a><%= link_to "Services", services_path %></a></li>
           </ul>
         </li>
-        <li><a href="/users/new"> Login</a></li>
-        <li><a href="#"> Logout</a></li>
-
       </ul>
     </nav>
   </div>

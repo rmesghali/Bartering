@@ -11,6 +11,11 @@ body {
   text-align: center;
 }
 
+#intro {
+  margin: 0px 20px 10px 20px;
+  text-align:justify;
+}
+
 .img-responsive center-block {
   width: 100%;
 }
@@ -130,6 +135,6 @@ color: #1f3842;
 .asteriskField {
   color: red;
 }
-#formbackground {``
-  background-color: #f09b1e;
+#formbackground {
+  background-color: #F09B1E;
 }

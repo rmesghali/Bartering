@@ -11,6 +11,11 @@ body {
   text-align: center;
 }
 
+#intro {
+  margin: 0px 20px 10px 20px;
+  text-align:justify;
+}
+
 .img-responsive center-block {
   width: 100%;
 }
@@ -89,17 +94,47 @@ color: #1f3842;
 
 /*This is for the footer*/
 .text {
-  color: black
+  color: #1f3842;
+  margin: 0px;
+  padding-top: 40px;
+  text-shadow: 1px 1px #f09b1e;
 }
 .footer {
-  position: relative;
+  position: fixed;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #4f8da6;
-  padding-top: 40px;
+  /*padding-top: 40px;
   padding-bottom: 40px;
-  margin-top: 40px;
+  margin-top: 40px;*/
   /*border-top: 2px solid ;*/
+}
+.footer-container {
+  padding: 0px;
+  margin: 0px;
+}
+
+/*<!-- Inline CSS based on choices in "Settings" tab -->*/
+.bootstrap-iso .formden_header h2,
+.bootstrap-iso .formden_header p,
+.bootstrap-iso form {
+  font-family: Arial, Helvetica, sans-serif; color: #1f3842
+}
+
+.bootstrap-iso form button,
+.bootstrap-iso form button:hover {
+  color: #1f3842 !important;
+}
+.bootstrap-iso .form-control:focus {
+  border-color: #4f8da6;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(79, 141, 166, 0.6);
+}
+
+.asteriskField {
+  color: red;
+}
+#formbackground {
+  background-color: #F09B1E;
 }

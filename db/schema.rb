@@ -20,14 +20,11 @@ ActiveRecord::Schema.define(version: 20160328204308) do
     t.string   "product"
     t.text     "description"
     t.text     "category"
-    t.string   "city"
-    t.string   "state"
     t.date     "expiration"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "neighborhood"
     t.integer  "user_id"
-    t.integer  "zip"
   end
 
   add_index "barters", ["user_id"], name: "index_barters_on_user_id", using: :btree

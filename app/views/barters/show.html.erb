@@ -1,44 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Product:</strong>
-  <%= @barter.product %>
-</p>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th>Neighborhood</th>
+      <th>Expiration</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-<p>
-  <strong>Description:</strong>
-  <%= @barter.description %>
-</p>
+  <tbody>
+    <tr>
+      <td><%= @barter.product %></td>
+      <td><%= @barter.description %></td>
+      <td><%= @barter.category %></td>
+      <td><%= @barter.neighborhood %></td>
+      <td><%= @barter.expiration %></td>
+    </tr>
+  </tbody>
 
-<p>
-  <strong>Category:</strong>
-  <%= @barter.category %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @barter.city %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @barter.state %>
-</p>
-
-<p>
-  <strong>Zip Code:</strong>
-  <%= @barter.zip %>
-</p>
-
-<p>
-  <strong>Neighborhood:</strong>
-  <%= @barter.neighborhood %>
-</p>
-
-<p>
-  <strong>Expiration:</strong>
-  <%= @barter.expiration %>
-</p>
-
-<%= link_to 'Edit', edit_barter_path(@barter) %> |
-<%= link_to 'Back', barters_path %>
+  <!--Links to the the 'New Barter form to create a new item to trade'
+  -->
+<div class="link">
+  <%= link_to 'New Barter', new_barter_path %>
+</div>  

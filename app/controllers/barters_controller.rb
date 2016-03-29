@@ -13,11 +13,11 @@ class BartersController < ApplicationController
   end
 
   def goods
-    @barters = Barter.where(:category => 'goods')
+    @barters = Barter.where(category: 'Goods')
   end
 
   def services
-    @barters = Barter.where(:category => 'services')
+    @barters = Barter.where(category: 'Services')
   end
 
   def hillcrest
@@ -57,6 +57,7 @@ class BartersController < ApplicationController
   # GET /barters/1
   # GET /barters/1.json
   def show
+    @barter = Barter.find(params[:id])
   end
 
   # GET /barters/new
@@ -116,6 +117,6 @@ class BartersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def barter_params
-    params.require(:barter).permit(:product, :description, :category, :neighborhood, :city, :state, :zip, :expiration)
+    params.require(:barter).permit(:product, :description, :category, :neighborhood, :expiration)
   end
 end

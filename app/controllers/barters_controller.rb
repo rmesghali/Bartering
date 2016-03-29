@@ -12,11 +12,11 @@ class BartersController < ApplicationController
   end
 
   def goods
-    @barters = Barter.where(:category => 'goods')
+    @barters = Barter.where(category: 'Goods')
   end
 
   def services
-    @barters = Barter.where(:category => 'services')
+    @barters = Barter.where(category: 'Services')
   end
 
   def hillcrest

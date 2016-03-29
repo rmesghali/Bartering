@@ -13,40 +13,11 @@
   </thead>
 
   <tbody>
-    <% @barters.each do |barter| %>
-      <tr>
-        <td><%= barter.product %></td>
-        <td><%= barter.description %></td>
-        <td><%= barter.category %></td>
-        <td><%= barter.neighborhood.capitalize %></td>
-        <td><%= barter.expiration %></td>
-      </tr>
-    <% end %>
+    <tr>
+      <td><%= @barter.product %></td>
+      <td><%= @barter.description %></td>
+      <td><%= @barter.category %></td>
+      <td><%= @barter.neighborhood %></td>
+      <td><%= @barter.expiration %></td>
+    </tr>
   </tbody>
-</table>
-
-
-<!-- <p>
-  <strong>Product:</strong>
-  <%= @barter.product %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @barter.description %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @barter.category %>
-</p>
-
-<p>
-  <strong>Neighborhood:</strong>
-  <%= @barter.neighborhood.capitalize %>
-</p>
-
-<p>
-  <strong>Expiration:</strong>
-  <%= @barter.expiration %>
-</p> -->

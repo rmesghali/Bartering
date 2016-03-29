@@ -89,19 +89,26 @@ color: #1f3842;
 
 /*This is for the footer*/
 .text {
-  color: black
+  color: #1f3842;
+  margin: 0px;
+  padding-top: 40px;
+  text-shadow: 1px 1px #f09b1e;
 }
 .footer {
-  position: relative;
+  position: fixed;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #4f8da6;
-  padding-top: 40px;
+  /*padding-top: 40px;
   padding-bottom: 40px;
-  margin-top: 40px;
+  margin-top: 40px;*/
   /*border-top: 2px solid ;*/
+}
+.footer-container {
+  padding: 0px;
+  margin: 0px;
 }
 
 /*<!-- Inline CSS based on choices in "Settings" tab -->*/
@@ -123,6 +130,6 @@ color: #1f3842;
 .asteriskField {
   color: red;
 }
-#formbackground {
+#formbackground {``
   background-color: #f09b1e;
 }

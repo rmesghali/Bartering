@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users, path_names: {login: "login", logout: "logout"}
+  # devise_for :users, path_names: {login: "login", logout: "logout"}
+
+  devise_for :users
+
   # :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
-  # resources :users
+
+  resources :users
   resources :barters
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -16,6 +20,7 @@ Rails.application.routes.draw do
   get '/kensington' => 'barters#kensington'
   get '/university_heights' => 'barters#university_heights'
   get '/little_italy' => 'barters#little_italy'
+
   # You can have the root of your site routed with "root"
   # root 'barter#landing'
   root 'barters#landing'

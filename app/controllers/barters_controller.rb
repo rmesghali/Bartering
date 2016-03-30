@@ -9,50 +9,64 @@ class BartersController < ApplicationController
   end
 
   def index
-    @barters = Barter.all
+    target_expiration = Date.today
+    @barters = Barter.where("expiration >= ?", target_expiration)
   end
 
   def goods
-    @barters = Barter.where(category: 'Goods')
+    target_category = 'Goods'
+    target_expiration = Date.today
+    @barters = Barter.where("expiration >= ? AND category = ?", target_expiration, target_category)
   end
 
   def services
-    @barters = Barter.where(category: 'Services')
+    target_category = 'Services'
+    target_expiration = Date.today
+    @barters = Barter.where("expiration >= ? AND category = ?", target_expiration, target_category)
   end
 
   def hillcrest
-    filter_neighborhood('hillcrest')
+    target_neighborhood = 'hillcrest'
+    target_expiration = Date.today
+    @barters = Barter.where("expiration >= ? AND neighborhood = ?", target_expiration, target_neighborhood)
   end
 
   def north_park
-    filter_neighborhood('north park')
+    target_neighborhood = 'north park'
+    target_expiration = Date.today
+    @barters = Barter.where("expiration >= ? AND neighborhood = ?", target_expiration, target_neighborhood)
   end
 
   def kensington
-    filter_neighborhood('kensington')
+    target_neighborhood = 'kensington'
+    target_expiration = Date.today
+    @barters = Barter.where("expiration >= ? AND neighborhood = ?", target_expiration, target_neighborhood)
   end
 
   def university_heights
-    filter_neighborhood('university heights')
+    target_neighborhood = 'university heights'
+    target_expiration = Date.today
+    @barters = Barter.where("expiration >= ? AND neighborhood = ?", target_expiration, target_neighborhood)
   end
 
   def little_italy
-    filter_neighborhood('little italy')
+    target_neighborhood = 'little italy'
+    target_expiration = Date.today
+    @barters = Barter.where("expiration >= ? AND neighborhood = ?", target_expiration, target_neighborhood)
   end
 
-
-  def filter_neighborhood(neighborhood)
-    barters = Barter.all
-    if barters.empty?
-      @barters = Barter.all
-    else
-      @barters = Barter.where(neighborhood: neighborhood)
-    end
-  end
-
-  def filter_category(category)
-
-  end
+  # def filter_neighborhood(neighborhood)
+  #   barters = Barter.all
+  #   if barters.empty?
+  #     @barters = Barter.all
+  #   else
+  #     @barters = Barter.where(neighborhood: neighborhood)
+  #   end
+  # end
+  #
+  # def filter_category(category)
+  #
+  # end
 
   # GET /barters/1
   # GET /barters/1.json
@@ -73,7 +87,6 @@ class BartersController < ApplicationController
   # POST /barters.json
   def create
     @barter = Barter.new(barter_params)
-
     respond_to do |format|
       if @barter.save
         format.html { redirect_to @barter, notice: 'Barter was successfully created.' }

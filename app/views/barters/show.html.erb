@@ -21,10 +21,40 @@
       <td><%= @barter.expiration %></td>
     </tr>
   </tbody>
+</table>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Message</th>
+      <th>Time</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @barter.comments.each do |comment| %>
+    <tr>
+      <td><%= comment.user.email %></td>
+      <td><%= comment.comment %></td>
+      <td><%= comment.created_at.to_formatted_s(:long_ordinal)  %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 
   <!--Links to the the 'New Barter form to create a new item to trade'
   -->
 <div class="link">
   <%= link_to 'New Barter', new_barter_path %> |
-  <%= link_to 'Back', barters_path %>
+  <%= link_to 'Back', barters_path %> |
+  <%= link_to 'New Comment', new_barter_comment_path(@barter.id) %>
 </div>
+<br/>
+<form>
+  <input type="button" value="Accept" name="accept_button"/>
+  <input type="button" value="Decline" name="accept_button"/>
+</form>
+<br/>
+<h4>Please either accept or decline offer here.  A decline will bring you back to the home page.</h4>

@@ -1,26 +1,18 @@
 require 'rails_helper'
 
-RSpec.feature "SearchNeighborhoods", type: :feature, js: true do
+RSpec.feature "Create New Barter", type: :feature do
   describe "As a user I" do
-    #this test searches listings by neighborhood
-    it "can click on new barter and be taken to barters/new" do
-      visit "/barters"
-      click_link 'New Barter'
-      expect(page).to have_content('New Barter')
-      expect(current_path).to eq '/barters/new'
-    end
-    #this test creates a new barter
-    it "can fill in form and create barter" do
-      visit "barters/new"
-      fill_in 'Product', with: 'lemon'
-      fill_in 'Description', with: '20 lemons'
-      choose('Goods')
-      select 'Hillcrest', from: "Neighborhood"
-      fill_in 'Expiration Date', with: '05/01/2016'
-      click_button('newbarter')
-    end
-    #This test creates a new barter and displays the newly created object
-    it "can display the newly created barter information" do
+    #this test creates a new user and a new barter
+    it "can fill in form and create a new barter" do
+      visit '/'
+      expect(page).to have_content("Home")
+      click_link "Sign up"
+      expect(current_path).to eq('/users/sign_up')
+      fill_in "user_email", with: "test@learn.com"
+      fill_in "user_password", with: "test12345"
+      fill_in "user_password_confirmation", with: "test12345"
+      click_button "Sign up"
+      expect(current_path).to eq('/')
       visit "barters/new"
       fill_in 'Product', with: 'lemon'
       fill_in 'Description', with: '20 lemons'

@@ -75,7 +75,6 @@ class BartersController < ApplicationController
   # GET /barters/1
   # GET /barters/1.json
   def show
-
     @barter = Barter.find(params[:id])
     @user = User.find(@barter.user_id)
   end

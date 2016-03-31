@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Messages", type: :feature  do
+RSpec.feature "Messages", type: :feature do
   describe "As a signed-in participant" do
     it "I can go to a listing and create a new comment" do
       create_user
@@ -9,21 +9,21 @@ RSpec.feature "Messages", type: :feature  do
       user = User.first
       barter = Barter.first
 
-      p barter.id
+      param = barter.id
 
-      # visit '/barters/barter'
+      visit '/barters/1'
+      expect(page).to have_content("TRADE")
+      expect(current_path).to eq('/barters/1')
+      expect(page).to have_content("Message")
+      click_link_or_button "New Comment"
+      expect(page).to have_content("New Comment")
+      fill_in "Comment", with: "words"
+      click_button "Create Comment"
+      expect(current_path).to eq('/barters/1')
+      expect(page).to have_content("words")
     end
-    #  Story: As a user I can sign up with email address and password.
-    # it "should sign up" do
-    #   visit 'users/sign_up'
-    #   expect(page).to have_content("Sign up")
-    #   fill_in "user_email", with: "me@learn.com"
-    #   fill_in "user_password", with: "notch8learn"
-    #   fill_in "user_password_confirmation", with: "notch8learn"
-    #   click_button "Sign up"
-    #   expect(current_path).to eq('/')
-    #   expect(page).to have_content("TRADE")
-    # end
+
+
   end
 end
 
@@ -51,6 +51,7 @@ def create_barter
   #select 'Goods', from: "radio"
   choose('Goods')
   select 'Hillcrest', from: "Neighborhood"
+  fill_in 'Expiration', with: "2016/01/20"
 
   click_button "newbarter"
   expect(page).to have_content('lemon')

@@ -1,6 +1,6 @@
 <!--Form used to create a new item to barter-->
 
-<%= form_for(@barter) do |f| %>
+<%= form_for(@barter, html: {multipart: true, class: "form-horizontal", role: "form"}) do |f| %>
   <% if @barter.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@barter.errors.count, "error") %> prohibited this barter from being saved:</h2>
@@ -20,22 +20,12 @@
  <div class="container-fluid">
   <div class="row" id="formbackground">
    <div class="col-md-6 col-sm-6 col-xs-12">
-    <div class="formden_header">
-     <p>
-     </p>
-    </div>
-    <form action="https://formden.com/post/wWHGqJyG/" method="post">
      <div class="form-group ">
-      <label class="control-label requiredField" for="name">
-       Product
-       <span class="asteriskField">
-        *
-       </span>
-      </label>
-      <input class="form-control" id="name" name="barter[product]" placeholder="Enter good or service here" type="text"/>
+      <label class="control-label requiredField" for="product">Product</label>
+      <input class="form-control" id="product" name="barter[product]" placeholder="Enter good or service here" type="text"/>
      </div>
      <div class="form-group ">
-      <label class="control-label requiredField" for="textarea">
+      <label class="control-label requiredField" for="textarea" id="description">
        Description
        <span class="asteriskField">
         *
@@ -88,28 +78,26 @@
       </select>
      </div>
      <div class="form-group ">
-      <label class="control-label " for="date">
-       Expiration Date
+      <label class="control-label requiredField" for="date">
+       Expiration Date (YEAR/MO/DAY format)
+       <span class="asteriskField">
+        *
+       </span>
       </label>
-      <input class="form-control" id="date" name="barter[expiration]" placeholder="MM/DD/YYYY" type="text"/>
+      <input class="form-control" id="date" name="barter[expiration]" placeholder="YYYY/MM/DD" type="text"/>
       <span class="help-block" id="hint_date">
        Set an expiration date for your goods or services. Your post will be automatically removed if still active on this date. For perishable goods, please indicate how long this good will remain fresh before spoiling.
       </span>
      </div>
+
+
      <div class="form-group">
       <div>
-
-       <button class="btn btn-default " id="newbarter" name="submit" type="submit">
+        <button class="btn btn-default " id="newbarter" name="submit" type="submit"/>
         Submit
-       </button>
-       <br/>
-      </br>
-      </br>
-      </br>
-      </br>
+        </button>
       </div>
      </div>
-    </form>
    </div>
   </div>
  </div>

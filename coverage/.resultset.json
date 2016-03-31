@@ -1,37 +1,151 @@
 {
   "RSpec": {
     "coverage": {
+<<<<<<< HEAD
       "/Users/learn/Desktop/Bartering/spec/features/new_barter_spec.rb": [
         1,
         null,
+=======
+<<<<<<< HEAD
+      "/Users/learn/Desktop/Bartering/spec/features/messages_spec.rb": [
+=======
+      "/Users/learn/Desktop/Bartering/spec/features/devises_spec.rb": [
+>>>>>>> 2a0bbea643bb96262aa05a2694be98b38db7fe96
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+<<<<<<< HEAD
+=======
+        1,
+        1,
+        null,
+        null,
+>>>>>>> 2a0bbea643bb96262aa05a2694be98b38db7fe96
+        1,
+        1,
+        1,
+        null,
+        1,
+>>>>>>> 0b40dbc4cd387a3229026df23e8b3e17463bc55b
+        1,
+        null,
+        1,
+        null,
+<<<<<<< HEAD
+=======
+        null,
+<<<<<<< HEAD
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+=======
+>>>>>>> 49343abc91bd8e1ba95b97bd8d08ca5fa88fffc8
+>>>>>>> 2a0bbea643bb96262aa05a2694be98b38db7fe96
+        1,
+>>>>>>> 0b40dbc4cd387a3229026df23e8b3e17463bc55b
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+<<<<<<< HEAD
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+=======
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+<<<<<<< HEAD
+=======
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+>>>>>>> 49343abc91bd8e1ba95b97bd8d08ca5fa88fffc8
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+>>>>>>> 2a0bbea643bb96262aa05a2694be98b38db7fe96
+        null,
+        1,
+        1,
+>>>>>>> 0b40dbc4cd387a3229026df23e8b3e17463bc55b
+        null,
         1,
         1,
         null,
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
         null
       ],
       "/Users/learn/Desktop/Bartering/spec/rails_helper.rb": [
@@ -99,20 +213,40 @@
         null,
         1,
         1,
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+        1,
+=======
+        4,
+>>>>>>> 49343abc91bd8e1ba95b97bd8d08ca5fa88fffc8
+>>>>>>> 0b40dbc4cd387a3229026df23e8b3e17463bc55b
         null,
         null,
         1,
         null,
+>>>>>>> 2a0bbea643bb96262aa05a2694be98b38db7fe96
         null,
         1,
         null,
         1,
         null,
+<<<<<<< HEAD
+        1,
         null,
+        1,
+=======
+        null,
+>>>>>>> 2a0bbea643bb96262aa05a2694be98b38db7fe96
         null,
         0,
         null,
         null,
+<<<<<<< HEAD
+        0,
+=======
+>>>>>>> 2a0bbea643bb96262aa05a2694be98b38db7fe96
         null,
         1,
         1,
@@ -120,6 +254,23 @@
         null,
         1,
         1,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        null,
+        null,
+        1,
+        1,
+=======
+=======
+        4,
+        null,
+        null,
+        1,
+        4,
+>>>>>>> 49343abc91bd8e1ba95b97bd8d08ca5fa88fffc8
+>>>>>>> 2a0bbea643bb96262aa05a2694be98b38db7fe96
+>>>>>>> 0b40dbc4cd387a3229026df23e8b3e17463bc55b
         null,
         null,
         null,
@@ -587,16 +738,27 @@
         1,
         null,
         null,
+<<<<<<< HEAD
+=======
+        1,
+        null,
+        null,
+>>>>>>> 2a0bbea643bb96262aa05a2694be98b38db7fe96
+        null,
         1,
         null,
         null,
         null,
         1,
+        null,
+        null,
+        1,
         1,
         null,
         null,
         null,
         null,
+        1,
         1,
         1,
         1,
@@ -666,6 +828,20 @@
         null,
         1,
         null,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        1,
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2a0bbea643bb96262aa05a2694be98b38db7fe96
+        1,
+        null
+      ],
+      "/Users/learn/Desktop/Bartering/app/helpers/application_helper.rb": [
+>>>>>>> 49343abc91bd8e1ba95b97bd8d08ca5fa88fffc8
+>>>>>>> 0b40dbc4cd387a3229026df23e8b3e17463bc55b
         1,
         null
       ],
@@ -674,6 +850,10 @@
         null
       ],
       "/Users/learn/Desktop/Bartering/app/helpers/barters_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/learn/Desktop/Bartering/app/helpers/comments_helper.rb": [
         1,
         null
       ],
@@ -694,6 +874,18 @@
         null,
         1,
         0,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2a0bbea643bb96262aa05a2694be98b38db7fe96
+        null,
+        null,
+        1,
+>>>>>>> 49343abc91bd8e1ba95b97bd8d08ca5fa88fffc8
+>>>>>>> 0b40dbc4cd387a3229026df23e8b3e17463bc55b
         0,
         null,
         null,
@@ -752,7 +944,14 @@
         null,
         null,
         null,
+        1,
+        0,
         null,
+        null,
+        null,
+        null,
+        1,
+        1,
         null,
         1,
         1,
@@ -761,6 +960,16 @@
         null,
         1,
         1,
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+        1,
+=======
+        0,
+>>>>>>> 49343abc91bd8e1ba95b97bd8d08ca5fa88fffc8
+>>>>>>> 2a0bbea643bb96262aa05a2694be98b38db7fe96
+>>>>>>> 0b40dbc4cd387a3229026df23e8b3e17463bc55b
         null,
         null,
         null,
@@ -771,6 +980,10 @@
         null,
         1,
         1,
+<<<<<<< HEAD
+        null,
+=======
+>>>>>>> 2a0bbea643bb96262aa05a2694be98b38db7fe96
         1,
         1,
         2,
@@ -831,13 +1044,32 @@
         1,
         null,
         1,
+<<<<<<< HEAD
+        null
+      ],
+      "/Users/learn/Desktop/Bartering/app/models/comment.rb": [
+=======
         1,
+>>>>>>> 2a0bbea643bb96262aa05a2694be98b38db7fe96
         1,
         1,
         1,
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1459455412
+=======
+<<<<<<< HEAD
+    "timestamp": 1459458739
+=======
+    "timestamp": 1459450354
+=======
+      ]
+    },
+    "timestamp": 1459365201
+>>>>>>> 49343abc91bd8e1ba95b97bd8d08ca5fa88fffc8
+>>>>>>> 2a0bbea643bb96262aa05a2694be98b38db7fe96
+>>>>>>> 0b40dbc4cd387a3229026df23e8b3e17463bc55b
   }
 }

@@ -68,15 +68,21 @@ class BartersController < ApplicationController
   #
   # end
 
+  def select
+    @barter = Barter.find(params[:id])
+  end
+
   # GET /barters/1
   # GET /barters/1.json
   def show
+
     @barter = Barter.find(params[:id])
+    @user = User.find(@barter.user_id)
   end
 
   # GET /barters/new
   def new
-    @barter = Barter.new
+    @barter = current_user.barters.build
   end
 
   # GET /barters/1/edit
@@ -86,7 +92,8 @@ class BartersController < ApplicationController
   # POST /barters
   # POST /barters.json
   def create
-    @barter = Barter.new(barter_params)
+    @barter = current_user.barters.build(barter_params)
+
     respond_to do |format|
       if @barter.save
         format.html { redirect_to @barter, notice: 'Barter was successfully created.' }

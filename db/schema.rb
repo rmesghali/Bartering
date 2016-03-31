@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160328204323) do
+ActiveRecord::Schema.define(version: 20160330185115) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,17 @@ ActiveRecord::Schema.define(version: 20160328204323) do
   end
 
   add_index "barters", ["user_id"], name: "index_barters_on_user_id", using: :btree
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "comment"
+    t.integer  "user_id"
+    t.integer  "barter_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["barter_id"], name: "index_comments_on_barter_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
@@ -50,4 +61,6 @@ ActiveRecord::Schema.define(version: 20160328204323) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "barters", "users"
+  add_foreign_key "comments", "barters"
+  add_foreign_key "comments", "users"
 end

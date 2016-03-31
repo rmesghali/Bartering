@@ -1,30 +1,22 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/learn/Desktop/Bartering/spec/features/new_barter_spec.rb": [
+      "/Users/learn/Desktop/Bartering/spec/features/devises_spec.rb": [
         1,
         null,
-        1,
-        1,
         null,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
+        null,
+        null,
         1,
         1,
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        1,
         1,
         1,
         1,
@@ -35,12 +27,88 @@
         null,
         null,
         null,
+        1,
+        1,
+        1,
+<<<<<<< HEAD
+=======
+        1,
+        null,
+        null,
+        null,
+>>>>>>> 49343abc91bd8e1ba95b97bd8d08ca5fa88fffc8
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+<<<<<<< HEAD
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         null,
         null,
         null,
         null,
+        null,
+        null,
+        null,
+        null,
+=======
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+>>>>>>> 49343abc91bd8e1ba95b97bd8d08ca5fa88fffc8
         null,
         null,
         null,
@@ -116,15 +184,25 @@
         null,
         null,
         1,
+<<<<<<< HEAD
+        1,
+=======
+        4,
+>>>>>>> 49343abc91bd8e1ba95b97bd8d08ca5fa88fffc8
+        null,
+        null,
         1,
         null,
         null,
-        1,
-        null,
-        null,
+<<<<<<< HEAD
         1,
         null,
         1,
+=======
+        4,
+        null,
+        4,
+>>>>>>> 49343abc91bd8e1ba95b97bd8d08ca5fa88fffc8
         null,
         null,
         null,
@@ -133,11 +211,19 @@
         null,
         null,
         1,
+<<<<<<< HEAD
         1,
         null,
         null,
         1,
         1,
+=======
+        4,
+        null,
+        null,
+        1,
+        4,
+>>>>>>> 49343abc91bd8e1ba95b97bd8d08ca5fa88fffc8
         null,
         null,
         null,
@@ -684,6 +770,13 @@
         null,
         1,
         null,
+<<<<<<< HEAD
+=======
+        1,
+        null
+      ],
+      "/Users/learn/Desktop/Bartering/app/helpers/application_helper.rb": [
+>>>>>>> 49343abc91bd8e1ba95b97bd8d08ca5fa88fffc8
         1,
         null
       ],
@@ -699,6 +792,14 @@
         1,
         null
       ],
+      "/Users/learn/Desktop/Bartering/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
       "/Users/learn/Desktop/Bartering/app/controllers/barters_controller.rb": [
         1,
         1,
@@ -712,6 +813,12 @@
         null,
         1,
         0,
+<<<<<<< HEAD
+=======
+        null,
+        null,
+        1,
+>>>>>>> 49343abc91bd8e1ba95b97bd8d08ca5fa88fffc8
         0,
         null,
         null,
@@ -774,11 +881,16 @@
         null,
         1,
         1,
+        0,
         null,
         null,
         null,
         1,
+<<<<<<< HEAD
         1,
+=======
+        0,
+>>>>>>> 49343abc91bd8e1ba95b97bd8d08ca5fa88fffc8
         null,
         null,
         null,
@@ -835,6 +947,7 @@
         1,
         null,
         null
+<<<<<<< HEAD
       ],
       "/Users/learn/Desktop/Bartering/app/controllers/application_controller.rb": [
         1,
@@ -857,5 +970,10 @@
       ]
     },
     "timestamp": 1459450354
+=======
+      ]
+    },
+    "timestamp": 1459365201
+>>>>>>> 49343abc91bd8e1ba95b97bd8d08ca5fa88fffc8
   }
 }

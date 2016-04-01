@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160330185115) do
+ActiveRecord::Schema.define(version: 20160401042728) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,10 +21,11 @@ ActiveRecord::Schema.define(version: 20160330185115) do
     t.text     "description"
     t.text     "category"
     t.date     "expiration"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.string   "neighborhood"
     t.integer  "user_id"
+    t.text     "interested_in"
   end
 
   add_index "barters", ["user_id"], name: "index_barters_on_user_id", using: :btree

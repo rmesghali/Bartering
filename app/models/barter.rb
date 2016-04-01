@@ -9,4 +9,5 @@ class Barter < ActiveRecord::Base
   validates :product, presence: true
   validates :description, presence: true
   validates :neighborhood, presence: true
+  validates :interested_in, presence: true
 end

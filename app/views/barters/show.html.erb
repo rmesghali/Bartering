@@ -3,6 +3,9 @@
 <table class="table table-hover">
   <thead>
     <tr>
+      <th>Information</th>
+    </tr>
+    <tr>
       <th>Product</th>
       <th>Description</th>
       <th>Category</th>
@@ -25,20 +28,26 @@
   </tbody>
 </table>
 
-<%= link_to "Let's Talk", new_barter_comment_path(@barter.id) %>
+<%= link_to "Let's Make a Trade", new_barter_comment_path(@barter.id) %>
 </br>
 
 <table class="table table-bordered">
   <thead>
     <tr>
+      <th></th>
+      <th></th>
+      <th>id</th>
       <th>User</th>
       <th>Message</th>
-      <th>Time</th>
+      <th>Message Timestamp</th>
     </tr>
   </thead>
   <tbody>
-    <% @barter.comments.each do |comment| %>
+    <% @barters.each do |comment| %>
     <tr>
+      <td><%= link_to 'Accept', accept_path(@comment_id), remote: true %></td>
+      <td><%= link_to 'Decline', new_barter_comment_path(@barter.id) %></td>
+      <td><%= comment.id %></td>
       <td><%= comment.user.email %></td>
       <td><%= comment.comment %></td>
       <td><%= comment.created_at.to_formatted_s(:long_ordinal)  %></td>
@@ -54,7 +63,3 @@
   <%= link_to 'New Comment', new_barter_comment_path(@barter.id) %>
 </div>
 <br/>
-<form>
-  <input type="button" value="Accept" name="accept_button"/>
-  <input type="button" value="Decline" name="decline_button"/>
-</form>

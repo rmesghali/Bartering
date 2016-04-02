@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/accept' => 'barters#accept'
   # resources :comments
   # devise_for :users, path_names: {login: "login", logout: "logout"}
 

@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :set_comment, only: [:show, :edit, :update, :destroy]
+  before_action :set_comment, only: [:show, :edit, :update, :destroy, :accept]
 
   # GET /comments
   # GET /comments.json
@@ -62,6 +62,22 @@ class CommentsController < ApplicationController
       format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def accept
+    @comment = Comment.find(params[:id])
+    @comment.accept = true
+    @comment.save
+    barter = @comment.barter_id
+    redirect_to barter_path(barter)
+  end
+
+  def decline
+    @comment = Comment.find(params[:id])
+    @comment.accept = false
+    @comment.save
+    barter = @comment.barter_id
+    redirect_to barter_path(barter)
   end
 
   private

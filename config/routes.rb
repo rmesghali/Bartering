@@ -9,11 +9,14 @@ Rails.application.routes.draw do
   resources :users
   # resources :barters
 
+  post 'comments/:id/accept' => 'comments#accept'
+  post 'comments/:id/decline' => 'comments#decline'
+
   resources :barters do
     resources :comments do
       collection do
-        post '/accept/:id' => :accept, as: 'comment_accept'
-        post '/decline/:id' => :decline, as: 'comment_decline'
+        #post '/accept/:id' => :accept, as: 'comment_accept'
+        # post '/decline/:id' => :decline, as: 'comment_decline'
       end
     end
   end

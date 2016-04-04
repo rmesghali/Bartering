@@ -47,8 +47,11 @@
     <% @barter.comments.each do |comment| %>
     <tr>
       <% next if comment.accept == false %>
-      <td><%= button_to 'Accept', comment_accept_barter_comments_path(@barter.id, comment.id), method: :post %></td>
-      <td><%= button_to 'Decline', comment_decline_barter_comments_path(@barter.id, comment.id), method: :post %></td>
+      <!-- <td><%#= button_to 'Accept', comment_accept_barter_comments_path(@barter.id, comment.id), method: :post %></td> -->
+      <td><%= button_to 'Accept',  '/comments/' + comment.id.to_s + '/accept', method: :post %></td>
+
+      <td><%= button_to 'Decline', '/comments/' + comment.id.to_s + '/decline', method: :post %></td>
+      <td><%#= button_to 'Decline', comment_decline_barter_comments_path(@barter.id, comment.id), method: :post %></td>
         <!-- <td><input type="button" value="Accept" name="accept_button"/></td>
         <td><input type="button" value="Decline" name="decline_button"/></td> -->
       <td><%= comment.user.username %></td>

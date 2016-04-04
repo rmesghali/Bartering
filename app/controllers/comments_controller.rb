@@ -65,9 +65,7 @@ class CommentsController < ApplicationController
   end
 
   def accept
-    @comment = Comment.find(params[:id])
-    @comment.accept = true
-    @comment.save
+    @comment.set_accepted
     barter = @comment.barter_id
     redirect_to barter_path(barter)
   end

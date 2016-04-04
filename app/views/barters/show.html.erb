@@ -38,9 +38,8 @@
     <tr>
       <th></th>
       <th></th>
-      <th>Id</th>
       <th>User</th>
-      <th>Message</th>
+      <th>Offer</th>
       <th>Message Timestamp</th>
     </tr>
   </thead>
@@ -52,8 +51,7 @@
       <td><%= button_to 'Decline', comment_decline_barter_comments_path(@barter.id, comment.id), method: :post %></td>
         <!-- <td><input type="button" value="Accept" name="accept_button"/></td>
         <td><input type="button" value="Decline" name="decline_button"/></td> -->
-      <td><%= comment.id %></td>
-      <td><%= comment.user.email %></td>
+      <td><%= comment.user.username %></td>
       <td><%= comment.comment %></td>
       <td><%= comment.created_at.to_formatted_s(:long_ordinal)  %></td>
     </tr>
@@ -94,6 +92,7 @@
   -->
 <div class="link">
   <%= link_to 'Back', barters_path %> |
+  <%= link_to 'New Offer', new_barter_comment_path(@barter.id) %> |
   <%= link_to 'New Comment', new_barter_comment_path(@barter.id) %> |
   <%= link_to "Let's Make a Trade", new_barter_comment_path(@barter.id) %>
 </div>

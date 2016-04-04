@@ -2,19 +2,17 @@
 <h1 id='profile'>My Profile Page</h1>
 
 <p>
-  <strong>Username:</strong>
-  <%= @user.username %>
+  <strong>Email:</strong>
+  <%= @user.email %>
 </p>
+
 
 <p>
   <strong>Password:</strong>
   <%= "Blocked for your security" %>
 </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+
 <%= link_to 'Edit Profile', edit_user_path(@user) %> |
 <%= link_to 'Back', user_path(current_user.id) %>
 
@@ -43,6 +41,7 @@
         <td><%= barter.neighborhood %></td>
         <td><%= barter.interested_in %></td>
         <td><%= barter.expiration %></td>
+        <td><%= link_to 'Select', barter_path(barter) %></td>
     </tr>
     <% end %>
 </tbody>

@@ -57,23 +57,31 @@ class BartersController < ApplicationController
 
 
   def select
-    @barter = Barter.find(params[:id])
+      @barter = Barter.find(params[:id])
   end
 
   # GET /barters/1
   # GET /barters/1.json
   def show
-    @barter = Barter.find(params[:id])
-    @barters = @barter.comments
-    @user = User.find(@barter.user_id)
-    @comment_id = @barters.last.id
+      @barter = Barter.find(params[:id])
+      @barters = @barter.comments
+      @user = User.find(@barter.user_id)
+      if @barters && @barters.length > 0
+          @comment_id = @barters.last.id
+      else
+          @comment_id = 0
+      end
   end
 
-  def accept(id)
+  def accept
     comment = Comment.find(id)
     comment.accept = true
     comment.save
   end
+
+  def decline
+  end
+
 
   # GET /barters/new
   def new

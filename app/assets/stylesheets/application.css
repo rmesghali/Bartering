@@ -22,6 +22,15 @@ body {
   width: 100%;
 }
 
+#infotd {
+    background-color: #f09b1e
+}
+
+#information {
+    border: 0
+}
+
+
 /*#navigation {
 background-color: #031724;
 color: #1f3842;
@@ -46,7 +55,6 @@ color: #1f3842;
   background-color: #4f8da6;
   /*background-image:         linear-gradient(to bottom, #4f8da6 0%,#4f8da6 100%);*/
   background-repeat: repeat-x; /* Repeat the gradient */
-  border-bottom: 1px solid white;
 }
 .nav-justified > .active > a,
 .nav-justified > .active > a:hover,

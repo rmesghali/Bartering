@@ -12,13 +12,13 @@ class CommentsController < ApplicationController
   def show
   end
 
-  # def accept(id)
-  #   # barter = Barter.find(params[:id])
-  #   # barter.update_attribute(:comment, :accept => true)
-  #   # comment = Comment.find(params[:comment_id)
-  #   comment = Comment.find(id)
-  #   # comment.update_attribute(:accept => true)
-  # end
+  def accept
+    # barter = Barter.find(params[:id])
+    # barter.update_attribute(:comment, :accept => true)
+    # comment = Comment.find(params[:comment_id)
+    # comment = Comment.find(id)
+    # comment.update_attribute(:accept => true)
+  end
 
   # GET /comments/new
   def new

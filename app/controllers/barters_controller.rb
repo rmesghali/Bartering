@@ -55,29 +55,33 @@ class BartersController < ApplicationController
     @barters = Barter.where("expiration >= ? AND neighborhood = ?", target_expiration, target_neighborhood)
   end
 
-  # def filter_neighborhood(neighborhood)
-  #   barters = Barter.all
-  #   if barters.empty?
-  #     @barters = Barter.all
-  #   else
-  #     @barters = Barter.where(neighborhood: neighborhood)
-  #   end
-  # end
-  #
-  # def filter_category(category)
-  #
-  # end
 
   def select
-    @barter = Barter.find(params[:id])
+      @barter = Barter.find(params[:id])
   end
 
   # GET /barters/1
   # GET /barters/1.json
   def show
-    @barter = Barter.find(params[:id])
-    @user = User.find(@barter.user_id)
+      @barter = Barter.find(params[:id])
+      @barters = @barter.comments
+      @user = User.find(@barter.user_id)
+      if @barters && @barters.length > 0
+          @comment_id = @barters.last.id
+      else
+          @comment_id = 0
+      end
   end
+
+  def accept
+    comment = Comment.find(id)
+    comment.accept = true
+    comment.save
+  end
+
+  def decline
+  end
+
 
   # GET /barters/new
   def new

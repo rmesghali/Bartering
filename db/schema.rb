@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20160401201538) do
     t.string   "neighborhood"
     t.integer  "user_id"
     t.text     "interested_in"
+    t.boolean  "accept"
   end
 
   add_index "barters", ["user_id"], name: "index_barters_on_user_id", using: :btree

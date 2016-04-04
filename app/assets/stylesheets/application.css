@@ -30,6 +30,10 @@ body {
     border: 0
 }
 
+#newbarterbutton {
+    margin-bottom: 10%;
+}
+
 
 /*#navigation {
 background-color: #031724;

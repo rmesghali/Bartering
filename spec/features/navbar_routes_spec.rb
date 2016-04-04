@@ -17,7 +17,11 @@ RSpec.feature "User Login and profile routes", type: :feature do
             click_link_or_button "Profile"
             expect(page).to have_content("My Profile Page")
         end
-
+        it "can see listings from the profile page" do
+            create_user
+            click_link_or_button 'Profile'
+            expect(page).to have_content('Listing Information')
+        end
 
     end
 end

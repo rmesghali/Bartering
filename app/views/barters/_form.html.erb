@@ -26,7 +26,7 @@
                 </div>
                 <div class="form-group ">
                     <label class="control-label requiredField" for="textarea" id="description">
-                        Description
+                        Details
                         <span class="asteriskField">
                             *
                         </span>
@@ -88,21 +88,21 @@
                 </div>
                 <div class="form-group ">
                     <label class="control-label requiredField" for="date">
-                        Expiration Date (YEAR/MO/DAY format)
+                        Expiration Date (YEAR-MO-DAY format)
                         <span class="asteriskField">
                             *
                         </span>
                     </label>
-                    <input class="form-control" id="date" name="barter[expiration]" placeholder="YYYY/MM/DD" type="text"/>
+                    <input class="form-control" id="date" name="barter[expiration]" placeholder="YYYY-MM-DD" type="text"/>
                     <span class="help-block" id="hint_date">
                         Set an expiration date for your goods or services. Your post will be automatically removed if still active on this date. For perishable goods, please indicate how long this good will remain fresh before spoiling.
                     </span>
                 </div>
 
 
-                <div class="form-group">
+                <div class="form-group" id="newbarterbutton">
                     <div>
-                        <button class="btn btn-default " id="newbarter" name="submit" type="submit"/>
+                        <button class="btn btn-default " id="submit" name="submit" type="submit"/>
                         Submit
                     </button>
                 </div>

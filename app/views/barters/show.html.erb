@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<table class="table table-hover">
+<table class="table table-hover" id="">
   <thead>
     <tr>
-      <th>Information</th>
+      <th id="information">Listing Information</th>
     </tr>
     <tr>
       <th>Product</th>
@@ -16,7 +16,7 @@
     </tr>
   </thead>
 ​
-  <tbody>
+  <tbody class="table table-bordered" id="infotd">
     <tr>
       <td><%= @barter.product %></td>
       <td><%= @barter.description %></td>
@@ -73,18 +73,22 @@
       <th>Id</th>
       <th>User</th>
       <th>Message</th>
+      <th>User</th>
       <th>Message Timestamp</th>
     </tr>
   </thead>
   <tbody>
-    <% @barter.comments.each do |comment| %>
+    <% @barters.each do |comment| %>
     <tr>
+      <td><%= link_to 'Accept', accept_path(@comment_id), remote: true %></td>
+      <td><%= link_to 'Decline', new_barter_comment_path(@barter.id) %></td>
       <% next if comment.accept == false %>
         <!-- <td><input type="button" value="Accept" name="accept_button"/></td>
         <td><input type="button" value="Decline" name="decline_button"/></td> -->
       <td><%= comment.id %></td>
       <td><%= comment.user.username %></td>
       <td><%= comment.comment %></td>
+      <td><%= comment.user.email %></td>
       <td><%= comment.created_at.to_formatted_s(:long_ordinal)  %></td>
     </tr>
     <% end %>

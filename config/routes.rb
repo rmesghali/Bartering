@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/accept' => 'barters#accept'
   # resources :comments
   # devise_for :users, path_names: {login: "login", logout: "logout"}
 
@@ -33,6 +34,7 @@ Rails.application.routes.draw do
   get '/university_heights' => 'barters#university_heights'
   get '/little_italy' => 'barters#little_italy'
   get '/selection' => 'barters#select'
+  get '/profile' => 'users#profile'
 
   # You can have the root of your site routed with "root"
   # root 'barter#landing'

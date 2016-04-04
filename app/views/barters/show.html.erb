@@ -28,14 +28,49 @@
   </tbody>
 </table>
 
-<%= link_to "Let's Make a Trade", new_barter_comment_path(@barter.id) %>
 </br>
 
-<table class="table table-bordered">
+<table class="table table-hover">
   <thead>
+    <tr>
+      <th>Offers</th>
+    </tr>
     <tr>
       <th></th>
       <th></th>
+      <th>User</th>
+      <th>Offer</th>
+      <th>Message Timestamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @barter.comments.each do |comment| %>
+    <tr>
+      <% next if comment.accept == false %>
+      <!-- <td><%#= button_to 'Accept', comment_accept_barter_comments_path(@barter.id, comment.id), method: :post %></td> -->
+      <td><%= button_to 'Accept',  '/comments/' + comment.id.to_s + '/accept', method: :post %></td>
+
+      <td><%= button_to 'Decline', '/comments/' + comment.id.to_s + '/decline', method: :post %></td>
+      <td><%#= button_to 'Decline', comment_decline_barter_comments_path(@barter.id, comment.id), method: :post %></td>
+        <!-- <td><input type="button" value="Accept" name="accept_button"/></td>
+        <td><input type="button" value="Decline" name="decline_button"/></td> -->
+      <td><%= comment.user.username %></td>
+      <td><%= comment.comment %></td>
+      <td><%= comment.created_at.to_formatted_s(:long_ordinal)  %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</br>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Comments</th>
+    </tr>
+    <tr>
+      <th>Id</th>
       <th>User</th>
       <th>Message</th>
       <th>Message Timestamp</th>
@@ -44,11 +79,11 @@
   <tbody>
     <% @barter.comments.each do |comment| %>
     <tr>
-      <form>
-        <td><input type="button" value="Accept" name="accept_button"/></td>
-        <td><input type="button" value="Decline" name="decline_button"/></td>
-      </form>
-      <td><%= comment.user.email %></td>
+      <% next if comment.accept == false %>
+        <!-- <td><input type="button" value="Accept" name="accept_button"/></td>
+        <td><input type="button" value="Decline" name="decline_button"/></td> -->
+      <td><%= comment.id %></td>
+      <td><%= comment.user.username %></td>
       <td><%= comment.comment %></td>
       <td><%= comment.created_at.to_formatted_s(:long_ordinal)  %></td>
     </tr>
@@ -60,6 +95,10 @@
   -->
 <div class="link">
   <%= link_to 'Back', barters_path %> |
-  <%= link_to 'New Comment', new_barter_comment_path(@barter.id) %>
+  <%= link_to 'New Offer', new_barter_comment_path(@barter.id) %> |
+  <%= link_to 'New Comment', new_barter_comment_path(@barter.id) %> |
+  <%= link_to "Let's Make a Trade", new_barter_comment_path(@barter.id) %>
 </div>
+<br/>
+<br/>
 <br/>

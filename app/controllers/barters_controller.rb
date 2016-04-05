@@ -90,6 +90,7 @@ class BartersController < ApplicationController
 
   # GET /barters/1/edit
   def edit
+      @barter = Barter.find(params[:id])
   end
 
   # POST /barters

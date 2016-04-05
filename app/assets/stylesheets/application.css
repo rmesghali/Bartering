@@ -2,9 +2,16 @@ body {
   padding-top: 20px;
   background-color: #f09b1e
 }
-.link {
 
+#intro_header {
+    text-align: center;
 }
+
+#intro_paragraph {
+    text-align: center;
+}
+
+
 #tradingpost {
   color: #1f3842;
   font-size: 72px;
@@ -55,6 +62,7 @@ color: #1f3842;
   /*nav bar text color*/
   color: white;
   text-align: center;
+  font-size: large;
   /*nav bar menu(excluding home)*/
   background-color: #4f8da6;
   /*background-image:         linear-gradient(to bottom, #4f8da6 0%,#4f8da6 100%);*/

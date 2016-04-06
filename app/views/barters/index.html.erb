@@ -19,17 +19,21 @@
 
     <tbody>
         <% @barters.each do |barter| %>
-          if barterer accepts is false or nil show
-          <% if barter.accept == nil %> 
+          <!-- if barterer accepts is false or nil show -->
+          <% if barter.accept == nil %>
         <tr>
+          <% if barter.image_file_name %>
             <td><%= link_to image_tag(barter.image.url(:small)), barter.image.url %></td>
-            <td><%= barter.product %></td>
-            <td><%= barter.description %></td>
-            <td><%= barter.category %></td>
-            <td><%= barter.neighborhood.capitalize %></td>
-            <td><%= barter.interested_in %></td>
-            <td><%= barter.expiration %></td>
-            <td><%= link_to 'Select', barter_path(barter) %></td>
+          <% else %>
+            <td>No Image</td>
+          <% end %>
+          <td><%= barter.product %></td>
+          <td><%= barter.description %></td>
+          <td><%= barter.category %></td>
+          <td><%= barter.neighborhood.capitalize %></td>
+          <td><%= barter.interested_in %></td>
+          <td><%= barter.expiration %></td>
+          <td><%= link_to 'Select', barter_path(barter) %></td>
         </tr>
           <% end %>
         <% end %>

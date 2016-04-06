@@ -109,7 +109,7 @@ class BartersController < ApplicationController
               end
           end
       else
-        redirect_to new_barter_path {flash: 'Barter must be created with an expiration date equal to today or later'}
+        redirect_to new_barter_path, {alert: 'Barter must be created with an expiration date equal to today or later'}
       end
   end
 

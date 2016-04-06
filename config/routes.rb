@@ -35,7 +35,8 @@ Rails.application.routes.draw do
   get '/little_italy' => 'barters#little_italy'
   get '/selection' => 'barters#select'
   get '/profile' => 'users#profile'
-
+  get '/unauthorized' => 'user#unauthorized'
+  
   # You can have the root of your site routed with "root"
   # root 'barter#landing'
   root 'barters#landing'

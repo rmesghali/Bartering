@@ -26,6 +26,20 @@ body {
     text-align: center;
 }
 
+.alert {
+    color: #093b5c;
+    font-family:fantasy;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+#error_explanation {
+    font-family: fantasy;
+    font-size: 18px;
+    color: #093b5c;
+    font-weight: bolder;
+}
+
 #sam {
     padding: 0px;
     max-width: 900px;

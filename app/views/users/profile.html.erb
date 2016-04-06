@@ -1,4 +1,8 @@
+<p id="notice"><%= notice %></p>
+
 <h1 id='profile'>My Profile Page</h1>
+<p id="notice"><%= notice %></p>
+
 
 <p>
   <strong>User:</strong>
@@ -19,7 +23,7 @@
 <table class="table table-hover" id="">
   <thead>
     <tr>
-      <th id="information"><h2>Listing Information</h2>
+      <th id="information"><h2>My Listing Information</h2>
     </tr>
     <tr>
       <th>Image</th>
@@ -36,7 +40,11 @@
 <tbody class="table table-bordered" id="infotd">
     <% @user.barters.each do |barter| %>
     <tr>
-        <td><%= link_to image_tag(barter.image.url(:small)), barter.image.url %></td>
+        <% if barter.image_file_name %>
+          <td><%= link_to image_tag(barter.image.url(:small)), barter.image.url %></td>
+        <% else %>
+          <td>No Image</td>
+        <% end %>
         <td><%= barter.product %></td>
         <td><%= barter.description %></td>
         <td><%= barter.category %></td>

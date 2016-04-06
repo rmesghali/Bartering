@@ -34,13 +34,13 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Offers</th>
+      <th>Trade Discussion</th>
     </tr>
     <tr>
       <th></th>
       <th></th>
       <th></th>
-      <th>Offer</th>
+      <th></th>
       <th>Message</th>
       <th>Timestamp</th>
     </tr>
@@ -62,7 +62,7 @@
         <!-- button_to = link to -->
         <td><%= button_to 'Decline', '/comments/' + comment.id.to_s + '/decline', method: :post %></td>
       <% else %>
-        <td></td>
+        <td>Trade Complete</td>
         <td></td>
       <% end %>
 
@@ -84,7 +84,6 @@
 
 <div class="link">
 
-  <%= link_to 'Back', barters_path %>
   <!-- the bartering process is not done -->
   <% @done = [] %>
 
@@ -98,10 +97,9 @@
   <% end %>
 
   <% if @done.empty? %>
-    <%= link_to 'New Comment', new_barter_comment_path(@barter.id) %>
-    <%= link_to "Let's Make a Trade", new_barter_comment_path(@barter.id) %>
+    <%= link_to "Let's Talk and Trade", new_barter_comment_path(@barter.id) %> |
   <% end %>
-
+  <%= link_to 'Back', barters_path %>
 </div>
 <br/>
 <br/>

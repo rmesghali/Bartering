@@ -7,6 +7,7 @@ class Comment < ActiveRecord::Base
   # marked accepted, thus making all other comments for the barter at hand declined
   def set_accepted
     # self calls the button accept on the page and assigns value of true
+
     self.accept = true
     self.save
     self.barter.reload

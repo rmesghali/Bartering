@@ -50,13 +50,15 @@ RSpec.describe Comment, type: :model do
 
     # check that @barter's owner is @owner_user
     expect(@barter.user).to eq @owner_user
-    # linking user to comments in db
+    # create new user to create new comment.
     @comment_user = User.new
     @comment_user.email = "comment@me.com"
     @comment_user.save
     # created comment true (accepted)
     @comment1 = Comment.new
+    # linking user to comments in db
     @comment1.user = @comment_user
+    # linking comment to barter
     @comment1.barter = @barter
     @comment1.comment = "1st comment"
     expect(@comment1.save).to eq true

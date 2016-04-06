@@ -21,7 +21,16 @@ body {
     font-weight: bolder;
     margin: 0px 10px 10px 10px;
 }
+.unauthorized {
+    font-family: fantasy;
+    text-align: center;
+}
 
+#sam {
+    padding: 0px;
+    max-width: 900px;
+    max-height: 600px;
+}
 
 #tradingpost {
   color: #1f3842;

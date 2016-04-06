@@ -38,9 +38,10 @@
     <tr>
       <th></th>
       <th></th>
-      <th>User</th>
+      <th></th>
       <th>Offer</th>
-      <th>Message Timestamp</th>
+      <th>Message</th>
+      <th>Timestamp</th>
     </tr>
   </thead>
   <tbody>
@@ -51,9 +52,7 @@
       <td><%= button_to 'Accept',  '/comments/' + comment.id.to_s + '/accept', method: :post %></td>
 
       <td><%= button_to 'Decline', '/comments/' + comment.id.to_s + '/decline', method: :post %></td>
-      <td><%#= button_to 'Decline', comment_decline_barter_comments_path(@barter.id, comment.id), method: :post %></td>
-        <!-- <td><input type="button" value="Accept" name="accept_button"/></td>
-        <td><input type="button" value="Decline" name="decline_button"/></td> -->
+      <td></td>
       <td><%= comment.user.username %></td>
       <td><%= comment.comment %></td>
       <td><%= comment.created_at.to_formatted_s(:long_ordinal)  %></td>

@@ -96,17 +96,21 @@ class BartersController < ApplicationController
   # POST /barters
   # POST /barters.json
   def create
-    @barter = current_user.barters.build(barter_params)
+      if barter_params[:expiration] >= Date.today.to_s
+          @barter = current_user.barters.build(barter_params)
 
-    respond_to do |format|
-      if @barter.save
-        format.html { redirect_to @barter, notice: 'Barter was successfully created.' }
-        format.json { render :show, status: :created, location: @barter }
+          respond_to do |format|
+              if @barter.save
+                  format.html { redirect_to @barter, notice: 'Barter was successfully created.' }
+                  format.json { render :show, status: :created, location: @barter }
+              else
+                  format.html { render :new }
+                  format.json { render json: @barter.errors, status: :unprocessable_entity }
+              end
+          end
       else
-        format.html { render :new }
-        format.json { render json: @barter.errors, status: :unprocessable_entity }
+        redirect_to new_barter_path
       end
-    end
   end
 
   # PATCH/PUT /barters/1

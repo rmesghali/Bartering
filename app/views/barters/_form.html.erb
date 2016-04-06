@@ -24,9 +24,10 @@
                         *
                     </span>
                     </label>
-                    <%= f.text_field :product, class:"form-control"%>
+                    <%= f.text_field :product, class:"form-control", id:"product" %>
                     <!-- <input class="form-control" id="product" name="barter[product]" placeholder="Enter good or service here" type="text"/> -->
                 </div>
+
                 <div class="form-group ">
                     <label class="control-label requiredField" for="textarea" id="description">
                         Description
@@ -34,9 +35,10 @@
                             *
                         </span>
                     </label>
-                    <%= f.text_area :description, class:"form-control"%>
+                    <%= f.text_area :description, class:"form-control", id:"desc" %>
                     <!-- <textarea class="form-control" cols="40" id="textarea" name="barter[description]" placeholder="describe your good or service" rows="5"></textarea> -->
                 </div>
+
                 <div class="form-group" id="div_radio">
                     <label class="control-label requiredField" for="radio">
                         Select a Choice
@@ -101,10 +103,20 @@
                             *
                         </span>
                     </label>
+<<<<<<< HEAD
                     <%= f.date_field :expiration, class:"form-control"%>
+=======
+                    <%= f.date_field :expiration, class:"form-control", id:"expiration" %>
+                    <!-- <input class="form-control" id="date" name="barter[expiration]" placeholder="YYYY-MM-DD" type="text"/>
+                    <span class="help-block" id="hint_date"> -->
+>>>>>>> david
                         Set an expiration date for your goods or services. Your post will be automatically removed if still active on this date. For perishable goods, please indicate how long this good will remain fresh before spoiling.
                 </div>
 
+                <div class="form-group">
+                Upload an image of your good or service
+                <%= f.file_field :image, id:"image" %>
+              </div>
 
                 <div class="form-group" id="newbarterbutton">
                     <div>

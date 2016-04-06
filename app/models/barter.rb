@@ -10,4 +10,8 @@ class Barter < ActiveRecord::Base
   validates :description, presence: true
   validates :neighborhood, presence: true
   validates :interested_in, presence: true
+
+
+
+  validates_date :expiration, :timeliness => {:on_or_after => lambda { Date.today }, :type => :date}
 end

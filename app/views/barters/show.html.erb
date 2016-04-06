@@ -39,9 +39,10 @@
     <tr>
       <th></th>
       <th></th>
-      <th>User</th>
+      <th></th>
       <th>Offer</th>
-      <th>Message Timestamp</th>
+      <th>Message</th>
+      <th>Timestamp</th>
     </tr>
   </thead>
   <tbody>
@@ -50,7 +51,7 @@
       <!-- next if skip this element in the iteration if the accept boolean is equal to false -->
       <% next if comment.accept == false %>
       <!-- if accept column = true all false comments disappear. -->
-      <% if comment.accept == nil %>
+      <% if comment.accept == nil && current_user.id == @barter.user_id %>
         <td><%= button_to 'Accept',  '/comments/' + comment.id.to_s + '/accept', method: :post %></td>
 
         <!-- button_to = link to -->
@@ -59,6 +60,8 @@
         <td></td>
         <td></td>
       <% end %>
+      
+      <td></td>
       <!-- get user name, from user table, through comments table -->
       <td><%= comment.user.username %></td>
       <!-- access comment table. comment column -->
@@ -89,7 +92,6 @@
   <% end %>
 
   <% if @done.empty? %>
-    <%= link_to 'New Offer', new_barter_comment_path(@barter.id) %>
     <%= link_to 'New Comment', new_barter_comment_path(@barter.id) %>
     <%= link_to "Let's Make a Trade", new_barter_comment_path(@barter.id) %>
   <% end %>

@@ -11,12 +11,13 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    
+
   end
 
 
   def profile
      @user = User.find(current_user.id)
+     @comments = @user.comments
   end
 
   # GET /users/new

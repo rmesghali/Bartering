@@ -16,7 +16,8 @@
     </tr>
   </thead>
 ​
-  <tbody class="table table-bordered" id="infotd">
+  <!-- <tbody class="table table-bordered" id="infotd"> -->
+  <tbody>
     <tr>
       <td><%= @barter.product %></td>
       <td><%= @barter.description %></td>
@@ -50,10 +51,13 @@
       <% next if comment.accept == false %>
       <!-- if accept column = true all false comments disappear. -->
       <% if comment.accept == nil %>
-      <td><%= button_to 'Accept',  '/comments/' + comment.id.to_s + '/accept', method: :post %></td>
+        <td><%= button_to 'Accept',  '/comments/' + comment.id.to_s + '/accept', method: :post %></td>
 
-      <!-- button_to = link to -->
-      <td><%= button_to 'Decline', '/comments/' + comment.id.to_s + '/decline', method: :post %></td>
+        <!-- button_to = link to -->
+        <td><%= button_to 'Decline', '/comments/' + comment.id.to_s + '/decline', method: :post %></td>
+      <% else %>
+        <td></td>
+        <td></td>
       <% end %>
       <!-- get user name, from user table, through comments table -->
       <td><%= comment.user.username %></td>

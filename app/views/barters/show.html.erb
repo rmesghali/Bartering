@@ -46,15 +46,18 @@
   <tbody>
     <% @barter.comments.each do |comment| %>
     <tr>
+      <!-- next if skip this element in the iteration if the accept boolean is equal to false -->
       <% next if comment.accept == false %>
-      <!-- <td><%#= button_to 'Accept', comment_accept_barter_comments_path(@barter.id, comment.id), method: :post %></td> -->
+      <!-- if accept column = true all false comments disappear. -->
+      <% if comment.accept == nil %>
       <td><%= button_to 'Accept',  '/comments/' + comment.id.to_s + '/accept', method: :post %></td>
 
+      <!-- button_to = link to -->
       <td><%= button_to 'Decline', '/comments/' + comment.id.to_s + '/decline', method: :post %></td>
-      <td><%#= button_to 'Decline', comment_decline_barter_comments_path(@barter.id, comment.id), method: :post %></td>
-        <!-- <td><input type="button" value="Accept" name="accept_button"/></td>
-        <td><input type="button" value="Decline" name="decline_button"/></td> -->
+      <% end %>
+      <!-- get user name, from user table, through comments table -->
       <td><%= comment.user.username %></td>
+      <!-- access comment table. comment column -->
       <td><%= comment.comment %></td>
       <td><%= comment.created_at.to_formatted_s(:long_ordinal)  %></td>
     </tr>
@@ -63,15 +66,30 @@
 </table>
 
 </br>
-
-
   <!--Links to the the 'New Barter form to create a new item to trade'
   -->
+
 <div class="link">
-  <%= link_to 'Back', barters_path %> |
-  <%= link_to 'New Offer', new_barter_comment_path(@barter.id) %> |
-  <%= link_to 'New Comment', new_barter_comment_path(@barter.id) %> |
-  <%= link_to "Let's Make a Trade", new_barter_comment_path(@barter.id) %>
+
+  <%= link_to 'Back', barters_path %>
+  <!-- the bartering process is not done -->
+  <% @done = [] %>
+
+  <!-- pull all comments from comments table in db  -->
+  <% @barter.comments.each do |comment| %>
+  <!-- if comment has value of true(accepted) -->
+    <% if comment.accept == true %>
+    <!--  -->
+      <% @done << 1 %>
+    <% end %>
+  <% end %>
+
+  <% if @done.empty? %>
+    <%= link_to 'New Offer', new_barter_comment_path(@barter.id) %>
+    <%= link_to 'New Comment', new_barter_comment_path(@barter.id) %>
+    <%= link_to "Let's Make a Trade", new_barter_comment_path(@barter.id) %>
+  <% end %>
+
 </div>
 <br/>
 <br/>

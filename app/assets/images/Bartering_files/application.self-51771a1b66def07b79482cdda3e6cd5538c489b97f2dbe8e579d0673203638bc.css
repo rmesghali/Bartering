@@ -5,46 +5,12 @@ body {
 
 #intro_header {
     text-align: center;
-    font-weight:bolder;
-    font-family: fantasy;
-}
-
-#intro_sentence {
-    text-align: center;;
-    font-family: fantasy;
 }
 
 #intro_paragraph {
-    text-align: justify;
-    font-family: fantasy;
-    font-size: large;
-    font-weight: bolder;
-    margin: 0px 10px 10px 10px;
-}
-.unauthorized {
-    font-family: fantasy;
     text-align: center;
 }
 
-.alert {
-    color: #093b5c;
-    font-family:fantasy;
-    font-weight: bolder;
-    font-size: 18px;
-}
-
-#error_explanation {
-    font-family: fantasy;
-    font-size: 18px;
-    color: #093b5c;
-    font-weight: bolder;
-}
-
-#sam {
-    padding: 0px;
-    max-width: 900px;
-    max-height: 600px;
-}
 
 #tradingpost {
   color: #1f3842;

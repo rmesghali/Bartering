@@ -72,9 +72,12 @@ class CommentsController < ApplicationController
     end
   end
 
+  # The view will talk to this controller, and run this method. This method will talk to the model and change a value in the database, by running the 'set_accepted' method.
   def accept
     @comment.set_accepted
     barter = @comment.barter_id
+    # on barter table pull barter id and update value to true
+    Barter.find(barter).update(accept: true)
     redirect_to barter_path(barter)
   end
 

@@ -18,6 +18,8 @@
 
     <tbody>
         <% @barters.each do |barter| %>
+          if barterer accepts is false or nil show
+          <% if barter.accept == nil %> 
         <tr>
             <td><%= barter.product %></td>
             <td><%= barter.description %></td>
@@ -27,6 +29,7 @@
             <td><%= barter.expiration %></td>
             <td><%= link_to 'Select', barter_path(barter) %></td>
         </tr>
+          <% end %>
         <% end %>
     </tbody>
 </table>

@@ -141,6 +141,6 @@ class BartersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def barter_params
-    params.require(:barter).permit(:product, :description, :category, :neighborhood, :interested_in, :expiration)
+    params.require(:barter).permit(:product, :description, :category, :neighborhood, :interested_in, :expiration, :image)
   end
 end

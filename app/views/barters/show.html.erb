@@ -54,11 +54,6 @@
       <% if comment.accept == nil && current_user.id == @barter.user_id %>
         <td><%= button_to 'Accept',  '/comments/' + comment.id.to_s + '/accept', method: :post %></td>
 
-
-<<<<<<< HEAD
-      <td><%= button_to 'Decline', '/comments/' + comment.id.to_s + '/decline', method: :post %></td>
-      <td></td>
-=======
         <!-- button_to = link to -->
         <td><%= button_to 'Decline', '/comments/' + comment.id.to_s + '/decline', method: :post %></td>
       <% else %>
@@ -68,7 +63,7 @@
 
       <td></td>
       <!-- get user name, from user table, through comments table -->
->>>>>>> david
+
       <td><%= comment.user.username %></td>
       <!-- access comment table. comment column -->
       <td><%= comment.comment %></td>
